@@ -3,7 +3,7 @@ Muddle Interactive Graphics Graphics System
  is a vector drawing graphics system originaly inplimented in the mid 1970s
  in the MUDDLE (MDL) programming environment at MIT-DMS. It supports many of the
  graphics avaiable at that timed over the ARPANET. Below is the introducxtion
- from the MIS Manual, "MIGS ORDER". "MIGS RECECNT" documents new add features.
+ from the MIGS Manual, "MIGS ORDER". "MIGS RECECNT" documents new add features.
 
 IDENTIFICATION
      M.I.G.S. - MUDDLE INTERACTIVE GRAPHICS SYSTEM
