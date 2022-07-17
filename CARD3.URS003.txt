@@ -1,0 +1,185 @@
+<DEFINE CARD (STRING)
+	<PAGE>
+	<SLEEP 3>
+	<MOVE 0 775>
+	<TERPRI>
+	<PRINC "                HAPPY HOLLY DAYS">
+	<TERPRI>
+	<PRINC "                    ">
+	<PRINC .STRING>
+	<DISP CARD1>
+	,NULL>
+	
+<USE "SWCHAR">
+	
+<DEFINE FEEP(STRING)
+	<USE "SWCHAR">
+        <SWTXT3 "HAPPY HOLLY DAYS" 380 760>
+        <SWTXT3 .STRING 380 745>>
+
+<DEFINE CARD2 (STRING)
+        <PAGE>
+        <FEEP .STRING>
+        <DISP CARD1 <XLATE 0 0 200>>>
+        
+<DEFINE CARD3 (STRING)
+        <PAGE>
+        <USE "SWCHAR">
+        <SWTEXT "HAPPY HOLLY DAYS" 380 760>
+        <SWTEXT .STRING 380 745>
+        <DISP CARD1 <XLATE 0 0 200>>
+        ,NULL>
+
+<DEFINE MKCARD3D (STR)
+	<USE "SWCHAR">
+	<PICT CARD3D ()
+		<SWTEXT "HAPPY HOLLY DAYS" 380 760>
+        		<SWTEXT .STRING 380 745>
+        		<CALL CARD1 <XLATE 0 0 200>>  >>
+
+
+<DEFINE MK&DSP_CARD3D (STR)
+	<USE "SWCHAR">
+	<PICT CARD3D ()
+		<SWTEXT "HAPPY HOLLY DAYS" 380 760>
+        		<SWTEXT .STR 380 745>
+        		<CALL CARD1 <XLATE 0 0 200>>  >
+	<PAGE>
+        <DISP CARD3D> >
+
+
+<SET CARD1!-MCELLS
+     '#MCELL(()
+	     ()
+	     3D
+	     #FALSE ()
+	     (-1 MT!-MCELLS <SCALE 5> <XLATE 0 0 5000>)
+	     (-1 TREE!-MCELLS <SCALE 0.50000000> <XLATE 700 100>)
+	     (-1 TREE!-MCELLS <SCALE 0.50000000> <XLATE -100 0 3000>)
+	     (-1 BOX!-MCELLS <SCALE 0.50000000> <XLATE 100 0 50>)
+	     (-1
+	      BOX1!-MCELLS
+	      <SCALE 0.50000000 0.50000000 1>
+	      <XLATE 205 0 200>)
+	     (-1 TREE!-MCELLS <SCALE 0.30000000> <XLATE 50 50 325>))>
+
+<SET BOX!-MCELLS
+     '#MCELL(()
+	     ()
+	     3D
+	     #FALSE ()
+	     (0 -100 -100 -100)
+	     (1 -100 100 -100)
+	     (1 100 100 -100)
+	     (1 100 -100 -100)
+	     (1 -100 -100 -100)
+	     (0 -100 -100 100)
+	     (1 -100 100 100)
+	     (1 100 100 100)
+	     (1 100 -100 100)
+	     (1 -100 -100 100)
+	     (0 -100 -100 -100)
+	     (1 -100 -100 100)
+	     (0 -100 100 -100)
+	     (1 -100 100 100)
+	     (0 100 100 -100)
+	     (1 100 100 100)
+	     (0 100 -100 -100)
+	     (1 100 -100 100)
+	     (0 -10 -100 -100)
+	     (1 -10 100 -100)
+	     (1 10 100 -100)
+	     (1 10 -100 -100)
+	     (1 -10 -100 -100)
+	     (0 -10 -100 100)
+	     (1 -10 100 100)
+	     (1 10 100 100)
+	     (1 10 -100 100)
+	     (1 -10 -100 100)
+	     (0 -10 -100 -100)
+	     (1 -10 -100 100)
+	     (0 -10 100 -100)
+	     (1 -10 100 100)
+	     (0 10 100 -100)
+	     (1 10 100 100)
+	     (0 10 -100 -100)
+	     (1 10 -100 100)
+	     (0 -100 -10 -100)
+	     (1 -100 10 -100)
+	     (1 100 10 -100)
+	     (1 100 -10 -100)
+	     (1 -100 -10 -100)
+	     (0 -100 -10 100)
+	     (1 -100 10 100)
+	     (1 100 10 100)
+	     (1 100 -10 100)
+	     (1 -100 -10 100)
+	     (0 -100 -10 -100)
+	     (1 -100 -10 100)
+	     (0 -100 10 -100)
+	     (1 -100 10 100)
+	     (0 100 10 -100)
+	     (1 100 10 100)
+	     (0 100 -10 -100)
+	     (1 100 -10 100))>
+
+<SET BOX1!-MCELLS
+     '#MCELL(() () 3D #FALSE () (-1 BOX!-MCELLS <ROTX 1.5707950>))>
+
+<SET MT!-MCELLS
+     '#MCELL(()
+	     ()
+	     3D
+	     #FALSE ()
+	     (0 -500 0 0)
+	     (1 -250 300 0)
+	     (1 -25 0 0)
+	     (0 -300 250 0)
+	     (1 -200 250 0)
+	     (0 -100 100 0)
+	     (1 150 350 0)
+	     (1 425 0 0)
+	     (0 50 250 0)
+	     (1 150 200 0)
+	     (1 245 250 0)
+	     (0 350 100 0)
+	     (1 550 300 0)
+	     (1 775 0 0)
+	     (0 500 250 0)
+	     (1 600 252 0))>
+
+<SET TREE!-MCELLS
+     '#MCELL(()
+	     ()
+	     3D
+	     #FALSE ()
+	     (-1 TRLN!-MCELLS <ROTY 0.0000000>)
+	     (-1 TRLN!-MCELLS <ROTY .69813112>)
+	     (-1 TRLN!-MCELLS <ROTY 1.3962622>)
+	     (-1 TRLN!-MCELLS <ROTY 2.0943933>)
+	     (-1 TRLN!-MCELLS <ROTY 2.7925244>)
+	     (-1 TRLN!-MCELLS <ROTY 3.4906556>)
+	     (-1 TRLN!-MCELLS <ROTY 4.1887867>)
+	     (-1 TRLN!-MCELLS <ROTY 4.8869178>)
+	     (-1 TRLN!-MCELLS <ROTY 5.5850490>))>
+
+<SET TRLN!-MCELLS
+     '#MCELL(()
+	     ()
+	     3D
+	     #FALSE ()
+	     (0 0 -150 0)
+	     (1 100 -150 0)
+	     (1 100 -100 0)
+	     (1 50 -100 0)
+	     (1 50 0 0)
+	     (1 350 0 0)
+	     (1 250 100 0)
+	     (1 300 100 0)
+	     (1 150 300 0)
+	     (1 200 300 0)
+	     (1 50 500 0)
+	     (1 100 500 0)
+	     (1 0 650 0)
+	     (1 0 -150 0))>
+
